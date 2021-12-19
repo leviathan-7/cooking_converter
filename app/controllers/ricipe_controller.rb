@@ -2,6 +2,7 @@ class RicipeController < ApplicationController
   def page
     @r=""
     @lst=[]
+    @nn = request.GET[:name]
     n = Recipe.find_by(name: request.GET[:name])
     f = Product.find_by(name: request.GET[:food])
     cn = request.GET[:count]

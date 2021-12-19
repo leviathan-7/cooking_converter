@@ -1,7 +1,7 @@
 
 <div>
   <h1>Просмотреть рецепт:</h1>
-  <%= form_with(url: "", method: "get") do %>
+  <%= form_with(url: "ricipe", method: "get") do %>
     <%= label_tag(:name,"Название рецепта:") %>
     <%= text_field_tag(:name) %>
     <br>
@@ -17,7 +17,7 @@
     <%= submit_tag("Просмотр") %>
   <% end %>
 
-  <h2>Рецепт:</h2>
+  <h2>Рецепт: <%= @nn %></h2>
   <p id="rec">
     <%= @r %>
   <br>

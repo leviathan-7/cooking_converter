@@ -5,6 +5,7 @@ class HomeController < ApplicationController
     p = Product.find_by(name: request.GET[:product])
     cn = request.GET[:count]
     m = request.GET[:from]
+    @t = cn.to_s+" "+m+" "+request.GET[:product] +" ~~> "
     if p != nil and cn!=nil and m!=nil and cn!='0'
       pr = p.id
       a =Converting.find_by(product_id: pr, metric_name: m)
