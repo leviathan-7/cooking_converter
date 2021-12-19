@@ -1,0 +1,32 @@
+
+<div>
+  <h1>Просмотреть рецепт:</h1>
+  <%= form_with(url: "", method: "get") do %>
+    <%= label_tag(:name,"Название рецепта:") %>
+    <%= text_field_tag(:name) %>
+    <br>
+    <br>
+    <%= label_tag(:food,"Название продукта:") %>
+    <%= text_field_tag(:food) %>
+    <br>
+    <br>
+    <%= label_tag(:count,"Количество:") %>
+    <%= number_field_tag(:count) %>
+    <br>
+    <br>
+    <%= submit_tag("Просмотр") %>
+  <% end %>
+
+  <h2>Рецепт:</h2>
+  <p id="rec">
+    <%= @r %>
+  <br>
+  <b>Продукты:</b>
+    <br>
+    <%= @lst %>
+  </p>
+</div>
+<div>
+  <hr>
+  <%= link_to 'На главную', root_url %>
+</div>

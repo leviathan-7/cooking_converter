@@ -1,0 +1,26 @@
+<h1>Конвертер:</h1>
+<div>
+  <%= form_with(url: "", method: "get") do %>
+  <%= label_tag(:count,"Количество:") %>
+  <%= number_field_tag(:count) %>
+    <br>
+    <br>
+  <%= label_tag(:from,"Единица измерения:") %>
+  <%= text_field_tag(:from) %>
+    <br>
+    <br>
+  <%= label_tag(:product,"Продукт:") %>
+  <%= text_field_tag(:product) %>
+    <br>
+    <br>
+  <%= submit_tag("Конвертировать") %>
+  <% end %>
+  <p id="conv">
+    <%= @ccc  %>
+    <%= @h  %>
+  </p>
+</div>
+<div>
+  <hr>
+  <%= link_to 'К рецептам', ricipe_url %>
+</div>
